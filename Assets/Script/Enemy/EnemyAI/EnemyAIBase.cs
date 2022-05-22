@@ -12,7 +12,8 @@ public class EnemyAIBase : MonoBehaviour
     //임시로 사용할 플레이어 트렌스폼.
     public Transform playerTransform;
     protected Rigidbody2D rigidbody;
-    protected float Speed;
+    protected float Speed;          //디폴트로 지정된 스피드.
+    protected float CurrentSpeed;   //현제 실질적으로 적용되는 속도.
     protected Vector3 moveVec;
     protected Vector3 NormalVec;
 
@@ -39,6 +40,7 @@ public class EnemyAIBase : MonoBehaviour
     public virtual void SetUp(float getSpeed, float getAttackRadius)
     {
         Speed = getSpeed;
+        CurrentSpeed = Speed;
         AttackRadius = getAttackRadius;
         ModifiedAttackRadius = AttackRadius;// / 1.5f;
     }
@@ -54,13 +56,23 @@ public class EnemyAIBase : MonoBehaviour
 
     }
 
+    public void ModifydeSpeed(float per)
+    {
+        CurrentSpeed = Speed * per;
+    }
+
+    public void UndoSpeed()
+    {
+        CurrentSpeed = Speed;
+    }
+
     protected virtual void Movement()
     {
         rigidbody.velocity = FrezeeVec;
 
         moveVec = playerTransform.position - this.transform.position;
         NormalVec = moveVec.normalized;
-        NormalVec *= Speed;
+        NormalVec *= CurrentSpeed;  //속도에 관련된 부분.
         NormalVec *= Time.deltaTime;
 
         if (ModifiedAttackRadius < moveVec.magnitude)
