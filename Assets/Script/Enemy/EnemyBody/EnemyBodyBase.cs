@@ -14,6 +14,8 @@ public class EnemyBodyBase : MonoBehaviour
     [SerializeField] protected EnemyAIBase EnemyAI;
     [SerializeField] protected EnemyAttackBase EnemyAttack;
 
+    [SerializeField] protected HealthBar healthBar;
+
     [SerializeField] protected int MaxHealth;   //최대 채력.
     protected int CurrentHealth;                //현제 채력.
     
@@ -70,7 +72,36 @@ public class EnemyBodyBase : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 타 오브젝트에서 해당 오브젝트의 데미지 정보를
+    /// 받아가기 위한 함수
+    /// </summary>
+    /// <returns></returns>
+    public virtual int AnotherGetDamage()
+    {
+        return bodydata.DAMAGE;
+    }
+
+
+    /// <summary>
+    /// 채력바 업데이트
+    /// </summary>
+    public void UpdateHealthBar()
+    {
+        healthBar.EditBar(MaxHealth, CurrentHealth);
+    }
+
     protected virtual void DeadThisUnit()
+    {
+
+    }
+
+    /// <summary>
+    /// 전리품을 드롭하는 함수.
+    /// 씬에 준비된 전리품 오브젝트 풀에서 준비된 
+    /// 오브젝트를 꺼내 사용하도록 한다.
+    /// </summary>
+    protected virtual void DropLoot()
     {
 
     }

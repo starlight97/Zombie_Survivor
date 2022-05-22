@@ -11,9 +11,12 @@ public class EnemyAIBase : MonoBehaviour
 {
     //임시로 사용할 플레이어 트렌스폼.
     public Transform playerTransform;
+    protected Rigidbody2D rigidbody;
     protected float Speed;
     protected Vector3 moveVec;
     protected Vector3 NormalVec;
+
+    protected Vector3 FrezeeVec;
 
     protected float AttackRadius;
     protected float ModifiedAttackRadius;
@@ -26,15 +29,18 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void Initialize()
     {
+        rigidbody = GetComponent<Rigidbody2D>();
+
         moveVec = new Vector3();
         NormalVec = new Vector3();
+        FrezeeVec = Vector3.zero;
     }
 
     public virtual void SetUp(float getSpeed, float getAttackRadius)
     {
         Speed = getSpeed;
         AttackRadius = getAttackRadius;
-        ModifiedAttackRadius = AttackRadius / 2;
+        ModifiedAttackRadius = AttackRadius;// / 1.5f;
     }
 
     // Update is called once per frame
@@ -50,6 +56,8 @@ public class EnemyAIBase : MonoBehaviour
 
     protected virtual void Movement()
     {
+        rigidbody.velocity = FrezeeVec;
+
         moveVec = playerTransform.position - this.transform.position;
         NormalVec = moveVec.normalized;
         NormalVec *= Speed;

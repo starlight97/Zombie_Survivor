@@ -48,7 +48,14 @@ public class EnemyAttackBase : MonoBehaviour
         //공격의 데미지 적용
 
         //공격 쿨타임 적용
-        StartCoroutine(AttackCooltime());
+
+        PlayerHP playerHP;
+        collision.gameObject.TryGetComponent<PlayerHP>(out playerHP);
+        if (playerHP != null)
+        {
+            playerHP.TakeDamage(Damage);
+            StartCoroutine(AttackCooltime());
+        }
     }
 
     /// <summary>
