@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: dfc2b4f3ce1552542bf245896d4591c8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Baskic8
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0b5c2cb004490a7458e97a9e62f6631b, type: 3}
+  - {fileID: 12800000, guid: ed2b755a0bc7c70459c6cf3646a13605, type: 3}
+  - {fileID: 12800000, guid: 789c18d4e90039942896d40dfb17a6c2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

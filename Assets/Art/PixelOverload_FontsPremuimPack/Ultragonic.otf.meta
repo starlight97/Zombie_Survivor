@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4cbfa5949012a654f9f78079499758e9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ultragonic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 70abddf6ab13a844189fe8166a9a5370, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
