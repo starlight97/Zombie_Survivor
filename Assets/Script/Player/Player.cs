@@ -22,13 +22,6 @@ public class Player : MonoBehaviour
         //enemyRader
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {        
-        if (collision.CompareTag("Enemy"))
-        {
-            playerHP.TakeDamage(10);
-        }
-    }
 
 
 }

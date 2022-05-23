@@ -10,40 +10,44 @@ public class Weapon01 : MonoBehaviour
     [SerializeField] 
     private float speed;     //탄의 속도
     [SerializeField] 
-    private float damage;    //탄의 데미지
-    [SerializeField] 
-    private float range;     //탄의 사거리
+    private int damage;    //탄의 데미지
     [SerializeField]
-    private float attackDelay;  // 공격 속도
+    private float range;     //탄의 사거리 exprosiveRange
+    [SerializeField]
+    private int exprosiveRange;     //탄의 폭발 범위
+    [SerializeField]
+    private float coolTime;  // 공격 쿨타임
+    [SerializeField]
+    private float exprosiveTime;
 
-    private float currentTime;
+    private bool isAttack;
+    private WaitForSeconds waitCoolTime;
     public GameObject target = null;
 
 
     void Start()
     {
         muzzleTransform = transform.Find("MuzzlePoint");
+        waitCoolTime = new WaitForSeconds(coolTime);    //실질적 공격 쿨타임이 적용되는 waitforsec
+        isAttack = false;
     }
 
 
     void Update()
     {
-        currentTime += Time.deltaTime;
-        if(currentTime > attackDelay)
+        if(!isAttack)
         {
-            //SpawnBullet();
-        }
+            SpawnBullet();
+        }        
 
-
-        WeaponRotation();
-     
+        WeaponRotation();     
     }
 
     private void SpawnBullet()
     {
         GameObject clone = Instantiate(bullet, muzzleTransform.position, transform.rotation);
-        clone.GetComponent<Bullet01>().Setup(10f, muzzleTransform.position - transform.position);
-        currentTime = 0f;
+        clone.GetComponent<Bullet01>().Setup(damage, exprosiveRange, muzzleTransform.position - transform.position, exprosiveTime);
+        StartCoroutine("AttackCooltime");
     }
 
     private void WeaponRotation()
@@ -60,7 +64,12 @@ public class Weapon01 : MonoBehaviour
         {
             transform.localEulerAngles = new Vector3(0, 0, 0);
         }
+    }
 
-
+    private IEnumerator AttackCooltime()
+    {
+        isAttack = true;
+        yield return waitCoolTime;
+        isAttack = false;
     }
 }
