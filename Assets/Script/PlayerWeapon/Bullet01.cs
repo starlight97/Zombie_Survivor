@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Bullet01 : MonoBehaviour
 {
-    private GameObject exprosive;
+    private GameObject exprosive;   // 총알 피격시 폭발처리할 폭발 오브젝트
     private MoveMent2D movement2D;
-    private int damage;
-    private int exprosiveRange;      // 폭발 범위
-    private Vector3 direction;
-    private CircleCollider2D circleCollider;
-    private WaitForSeconds waitExprosiveTime;
+    private int damage;             // 무기 데미지
+    private Vector3 direction;      // 총알이 날아갈 방향
+    private WaitForSeconds waitExprosiveTime;   // 폭발유지 시간
 
     private float currentTime = 0f;
 
@@ -21,12 +19,10 @@ public class Bullet01 : MonoBehaviour
     public void Setup(int damage, int exprosiveRange, Vector3 direction, float exprosiveTime)
     {
         movement2D = GetComponent<MoveMent2D>();
-        this.circleCollider = GetComponent<CircleCollider2D>();
         this.waitExprosiveTime = new WaitForSeconds(exprosiveTime);
         exprosive = transform.GetChild(0).gameObject;
         this.damage = damage;                              // 무기가 설정해준 공격력
         this.direction = direction;
-        this.exprosiveRange = exprosiveRange;       // 폭발 범위
     }
 
     private void Update()
@@ -57,7 +53,6 @@ public class Bullet01 : MonoBehaviour
         //공격이 적용되는 부분
         //공격의 데미지 적용
         EnemyBodyBase enemyBodyBase;
-        circleCollider.radius = 1.5f;
 
         collision.gameObject.TryGetComponent<EnemyBodyBase>(out enemyBodyBase);
         if (enemyBodyBase != null)
