@@ -12,6 +12,8 @@ public class EnemyAttackBase : MonoBehaviour
 
     [SerializeField] protected CircleCollider2D AttackCircle;
 
+    [SerializeField] protected EnemyAnimationBase EnemyAnimation;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -26,7 +28,13 @@ public class EnemyAttackBase : MonoBehaviour
 
     protected virtual void Initialize()
     {
-        
+        if (EnemyAnimation == null) //적 에니메이션 스크립트가 달려있지 않을시 취득 시도.
+        {
+            EnemyAnimation = GetComponent<EnemyAnimationBase>();
+#if UNITY_EDITOR
+            Debug.LogError("This Object has not EnemyAnimationBase\nTry Get Component...");
+#endif
+        }
     }
 
     public virtual void SetUp(int mDamage, float mRadius, float mCoolTime)
@@ -42,19 +50,25 @@ public class EnemyAttackBase : MonoBehaviour
     /// 적 콜라이더에 닿았을시에 공격이 적용되는 부분
     /// 공격의 쿨타임을 적용시켜 적에게 순간적으로 데미지가 적용되지 않도록 해야한다.
     /// </summary>
-    protected virtual void Attack(Collision2D collision)
+    protected virtual void Attack(Collider2D collision)
     {
         //공격이 적용되는 부분
         //공격의 데미지 적용
 
         //공격 쿨타임 적용
-
-        PlayerHP playerHP;
-        collision.gameObject.TryGetComponent<PlayerHP>(out playerHP);
-        if (playerHP != null)
+        if (collision.CompareTag("Enemy") != true)
         {
-            playerHP.TakeDamage(Damage);
-            StartCoroutine(AttackCooltime());
+            Debug.Log("DoAttack");
+
+            PlayerHP playerHP;
+            collision.gameObject.TryGetComponent<PlayerHP>(out playerHP);
+            if (playerHP != null)
+            {
+                playerHP.TakeDamage(Damage);
+                StartCoroutine(AttackCooltime());
+
+                EnemyAnimation.SetStateAttack();
+            }
         }
     }
 
@@ -67,6 +81,9 @@ public class EnemyAttackBase : MonoBehaviour
         DisAbleAttackCollider();
         yield return WaitCoolTime;
         EnAbleAttackCollider();
+
+        Debug.Log("AttackEND");
+        EnemyAnimation.SetStateMove();
     }
 
     /// <summary>
@@ -90,6 +107,10 @@ public class EnemyAttackBase : MonoBehaviour
     /// </summary>
     /// <param name="collision"></param>
     private void OnCollisionStay2D(Collision2D collision)
+    {
+        //Attack(collision);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Attack(collision);
     }

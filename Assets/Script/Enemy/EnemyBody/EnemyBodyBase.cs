@@ -13,11 +13,17 @@ public class EnemyBodyBase : MonoBehaviour
     [SerializeField] protected EnemyBodyDataBase bodydata;
     [SerializeField] protected EnemyAIBase EnemyAI;
     [SerializeField] protected EnemyAttackBase EnemyAttack;
+    //적 에니메이션 스크립트.
+    [SerializeField] protected EnemyAnimationBase EnemyAnimation;
+
+    //적 경험치 오브젝트 풀
+    [SerializeField] protected DropItemObjectPool ObjectPool;
 
     [SerializeField] protected HealthBar healthBar;
 
     [SerializeField] protected int MaxHealth;   //최대 채력.
     protected int CurrentHealth;                //현제 채력.
+    protected bool isAlive;
 
     protected IEnumerator corDotDamage; //지속적인 도트데미지를 주기 위한 corDotDamage...
     [Tooltip("DotDamage이 적용되는 중 사이의 인터벌 값입니다.")]
@@ -46,11 +52,19 @@ public class EnemyBodyBase : MonoBehaviour
         //채력 초기화
         MaxHealth = bodydata.MAXHEALTH;
         CurrentHealth = MaxHealth;
+        isAlive = true;
 
         //속도 설정
         EnemyAI.SetUp(bodydata.SPEED, bodydata.RADIUS);
         EnemyAttack.SetUp(bodydata.DAMAGE, bodydata.RADIUS, bodydata.COOLTIME);
         DotWaitTime = new WaitForSeconds(fDotWaitTime);
+        if (EnemyAnimation == null) //적 에니메이션 스크립트가 달려있지 않을시 취득 시도.
+        {
+            EnemyAnimation = GetComponent<EnemyAnimationBase>();
+#if UNITY_EDITOR
+            Debug.LogError("This Object has not EnemyAnimationBase\nTry Get Component...");
+#endif
+        }
     }
 
     protected virtual void Start()
@@ -89,18 +103,23 @@ public class EnemyBodyBase : MonoBehaviour
     /// <param name="Damage"></param>
     public virtual void GetDamaged(int Damage)
     {
-        if(0 < CurrentHealth - Damage)
+        if (isAlive)
         {
-            CurrentHealth -= Damage;
-        }
-        else
-        {
-            CurrentHealth = 0;
-            DeadThisUnit();
-        }
+            if (0 < CurrentHealth - Damage)
+            {
+                CurrentHealth -= Damage;
+            }
+            else
+            {
+                CurrentHealth = 0;
+                isAlive = false;
+                Debug.Log("Dead!!");
+                DeadThisUnit();
+            }
 
-        //헬스바 업데이트.
-        UpdateHealthBar();
+            //헬스바 업데이트.
+            UpdateHealthBar();
+        }
     }
 
     /// <summary>
@@ -327,7 +346,13 @@ public class EnemyBodyBase : MonoBehaviour
 
     protected virtual void DeadThisUnit()
     {
+        DropLoot();
 
+        EnemyAnimation.SetStateDead();
+
+        //비활성화 오브젝트 풀링시에 해당 풀로 복귀
+        ObjectPool.CallFunc_DropEXP(this.transform, 1);
+        this.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -337,7 +362,7 @@ public class EnemyBodyBase : MonoBehaviour
     /// </summary>
     protected virtual void DropLoot()
     {
-
+        Debug.Log("DROP LOOT!");
     }
 
 }
