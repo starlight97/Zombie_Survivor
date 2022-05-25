@@ -1,0 +1,864 @@
+fileFormatVersion: 2
+guid: 2742d5d9be0c2ae4880528966644b703
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7671774321956203850
+    second: CutSpriteCar2_0
+  - first:
+      213: 2294671784850813435
+    second: CutSpriteCar2_1
+  - first:
+      213: 1783814624926701993
+    second: CutSpriteCar2_2
+  - first:
+      213: 2013648669657407450
+    second: CutSpriteCar2_3
+  - first:
+      213: 9187781823641537664
+    second: CutSpriteCar2_4
+  - first:
+      213: -902683395291410200
+    second: CutSpriteCar2_5
+  - first:
+      213: -4459976508354234890
+    second: CutSpriteCar2_6
+  - first:
+      213: -8518372771970777813
+    second: CutSpriteCar2_7
+  - first:
+      213: 277048711335082753
+    second: CutSpriteCar2_8
+  - first:
+      213: 2686610915993585565
+    second: CutSpriteCar2_9
+  - first:
+      213: 3205794356017769428
+    second: CutSpriteCar2_10
+  - first:
+      213: 7358080431660937089
+    second: CutSpriteCar2_11
+  - first:
+      213: 7964565849485359270
+    second: CutSpriteCar2_12
+  - first:
+      213: -3249956039269018823
+    second: CutSpriteCar2_13
+  - first:
+      213: -1358812829776389862
+    second: CutSpriteCar2_14
+  - first:
+      213: 8216178849931808334
+    second: CutSpriteCar2_15
+  - first:
+      213: -6519093171677095682
+    second: CutSpriteCar2_16
+  - first:
+      213: -561465645868893786
+    second: CutSpriteCar2_17
+  - first:
+      213: 843583143551639009
+    second: CutSpriteCar2_18
+  - first:
+      213: 139620012727419048
+    second: CutSpriteCar2_19
+  - first:
+      213: 6613425946811319295
+    second: CutSpriteCar2_20
+  - first:
+      213: -674524846782846563
+    second: CutSpriteCar2_21
+  - first:
+      213: 6554891695741085283
+    second: CutSpriteCar2_22
+  - first:
+      213: -7318839961050261179
+    second: CutSpriteCar2_23
+  - first:
+      213: -3601484983088290407
+    second: CutSpriteCar2_24
+  - first:
+      213: -6948377925411892439
+    second: CutSpriteCar2_25
+  - first:
+      213: -2842213984489563812
+    second: CutSpriteCar2_26
+  - first:
+      213: -8161089954068998509
+    second: CutSpriteCar2_27
+  - first:
+      213: -2104519650595456159
+    second: CutSpriteCar2_28
+  - first:
+      213: -4955918603412460820
+    second: CutSpriteCar2_29
+  - first:
+      213: 359331693069212822
+    second: CutSpriteCar2_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CutSpriteCar2_0
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 224
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4da929591e977a60800000000000000
+      internalID: 7671774321956203850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_1
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 224
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1f424a4df48df10800000000000000
+      internalID: 2294671784850813435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_2
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 192
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a917e743f161c810800000000000000
+      internalID: 1783814624926701993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_3
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 192
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf1e59dbcae1fb10800000000000000
+      internalID: 2013648669657407450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_4
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 192
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cc1ffb3ee818f70800000000000000
+      internalID: 9187781823641537664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_5
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 160
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0130f0c360973f0800000000000000
+      internalID: -902683395291410200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_6
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 160
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f575f0eefafa12c0800000000000000
+      internalID: -4459976508354234890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 126
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d725e9819a8c980800000000000000
+      internalID: -8518372771970777813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_8
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 131
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b7b98c55648d300800000000000000
+      internalID: 277048711335082753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_9
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 128
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d970c71d462c84520800000000000000
+      internalID: 2686610915993585565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 108
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db24655bf44d7c20800000000000000
+      internalID: 3205794356017769428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_11
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 125
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f27e5fa272d1660800000000000000
+      internalID: 7358080431660937089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_12
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 106
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a838c82172d78e60800000000000000
+      internalID: 7964565849485359270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_13
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 125
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9331cb78336d5e2d0800000000000000
+      internalID: -3249956039269018823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_14
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 106
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a195fec3ee6842de0800000000000000
+      internalID: -1358812829776389862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_15
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 112
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e4341022bb50270800000000000000
+      internalID: 8216178849931808334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_16
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 112
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8138ccc478785a0800000000000000
+      internalID: -6519093171677095682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_17
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 107
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9366848f54538f0800000000000000
+      internalID: -561465645868893786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_18
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 107
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed17e9466205bb00800000000000000
+      internalID: 843583143551639009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_19
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 106
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0472e69a700f100800000000000000
+      internalID: 139620012727419048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_20
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 106
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff34a04fbdb97cb50800000000000000
+      internalID: 6613425946811319295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 81
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d996553c93b93a6f0800000000000000
+      internalID: -674524846782846563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_22
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 81
+        width: 41
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3662ec99447a7fa50800000000000000
+      internalID: 6554891695741085283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_23
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 81
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5495aa115d14e6a90800000000000000
+      internalID: -7318839961050261179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_24
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 107
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9956e174d74f40ec0800000000000000
+      internalID: -3601484983088290407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_25
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 127
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92398a64717629f90800000000000000
+      internalID: -6948377925411892439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_26
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 130
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c591ad6907d6e88d0800000000000000
+      internalID: -2842213984489563812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_27
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 107
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39655b31debfdbe80800000000000000
+      internalID: -8161089954068998509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_28
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 127
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bbd6b278e3bc2e0800000000000000
+      internalID: -2104519650595456159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_29
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 130
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceaa9dba94a093bb0800000000000000
+      internalID: -4955918603412460820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutSpriteCar2_30
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 160
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c1ee1654a9cf400800000000000000
+      internalID: 359331693069212822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
