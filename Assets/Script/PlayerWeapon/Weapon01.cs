@@ -12,11 +12,11 @@ public class Weapon01 : MonoBehaviour
     [SerializeField] 
     private int damage;    //탄의 데미지
     [SerializeField]
-    private float range;     //탄의 사거리 exprosiveRange
+    private float range;     //탄의 사거리
     [SerializeField]
     private int exprosiveRange;     //탄의 폭발 범위
     [SerializeField]
-    private float coolTime;  // 공격 쿨타임
+    private float attackDelay;  // 공격 딜레이
     [SerializeField]
     private float exprosiveTime;
 
@@ -28,7 +28,7 @@ public class Weapon01 : MonoBehaviour
     void Start()
     {
         muzzleTransform = transform.Find("MuzzlePoint");
-        waitCoolTime = new WaitForSeconds(coolTime);    //실질적 공격 쿨타임이 적용되는 waitforsec
+        waitCoolTime = new WaitForSeconds(attackDelay);    //실질적 공격 쿨타임이 적용되는 waitforsec
         isAttack = false;
     }
 
@@ -50,6 +50,9 @@ public class Weapon01 : MonoBehaviour
         StartCoroutine("AttackCooltime");
     }
 
+    /// <summary>
+    /// 무기 회전 로직
+    /// </summary>
     private void WeaponRotation()
     {
         if(target != null)

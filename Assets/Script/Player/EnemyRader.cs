@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class EnemyRader : MonoBehaviour
 {
-    [SerializeField]
-    private Weapon01 weapon01;
-    // Start is called before the first frame update
+    private GameObject target;
 
+    public GameObject Target => target;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            weapon01.target = collision.gameObject;
-        }
-        else
-        {
-            //weapon01.target = null;
+            target = collision.gameObject;
         }
     }
 
