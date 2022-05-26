@@ -344,6 +344,13 @@ public class EnemyBodyBase : MonoBehaviour
         healthBar.EditBar(MaxHealth, CurrentHealth);
     }
 
+    public void ResetHealth()
+    {
+        isAlive = true;
+        CurrentHealth = MaxHealth;
+        UpdateHealthBar();
+    }
+
     protected virtual void DeadThisUnit()
     {
         DropLoot();

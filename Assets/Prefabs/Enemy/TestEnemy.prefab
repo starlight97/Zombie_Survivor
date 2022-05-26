@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyAnimation: {fileID: 4835273303556701411}
+  EnemyBody: {fileID: 1764517005246268541}
   playerTransform: {fileID: 0}
 --- !u!114 &1764517005246268541
 MonoBehaviour:

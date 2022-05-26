@@ -65,6 +65,8 @@ public class EnemySpawnerBase : MonoBehaviour
             tmpObj.gameObject.SetActive(true);
             //TestCode
             tmpObj.playerTransform = TestPlayer.transform;
+            tmpObj.transform.position = this.gameObject.transform.position;
+            tmpObj.ResetHealth();
             tmpObj.GetComponent<EnemyBodyBase>().ObjectPool = DropItemPool;
         }
 

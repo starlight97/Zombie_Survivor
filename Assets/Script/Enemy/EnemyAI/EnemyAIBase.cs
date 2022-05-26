@@ -11,7 +11,7 @@ public class EnemyAIBase : MonoBehaviour
 {
     //임시로 사용할 플레이어 트렌스폼.
     [SerializeField] protected EnemyAnimationBase EnemyAnimation;
-
+    [SerializeField] protected EnemyBodyBase EnemyBody;
     public Transform playerTransform;
     protected Rigidbody2D rigidbody;
     protected float Speed;          //디폴트로 지정된 스피드.
@@ -26,6 +26,7 @@ public class EnemyAIBase : MonoBehaviour
 
     //오브젝트 풀 관련
     protected EnemySpawnerBase Parrent;
+
 
 
     // Start is called before the first frame update
@@ -104,6 +105,11 @@ public class EnemyAIBase : MonoBehaviour
     public void RetrunStackThis()
     {
         Parrent.Push(this);
+    }
+
+    public void ResetHealth()
+    {
+        EnemyBody.ResetHealth();
     }
 
 }
