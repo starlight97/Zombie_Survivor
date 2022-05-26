@@ -26,27 +26,33 @@ public class EnemyAnimationBase : MonoBehaviour
         //인스팩터상에서 집어넣지 않았을 경우
         if(animator == null)
             animator = GetComponent<Animator>();
+        SetStateDefualt();
+        SetStateMove();
     }
 
     public void SetStateMove()
     {
         SetStateDefualt();
-        animator.SetBool("Move", false);
+        animator.SetBool("Move", true);
     }
 
     public void SetStateAttack()
     {
+        //Debug.Log("Attack Animation ABLE");
         SetStateDefualt();
-        animator.SetTrigger("Attack");
+        animator.SetTrigger("AttackTrg");
         animator.SetBool("Attack", true);
     }
 
     public void SetStateDead()
     {
         SetStateDefualt();
-        animator.SetTrigger("Dead");
+        animator.SetBool("Dead", true);
     }
 
+    /// <summary>
+    /// 모든 변수 초기화.
+    /// </summary>
     public void SetStateDefualt()
     {
         animator.SetBool("Move", false);

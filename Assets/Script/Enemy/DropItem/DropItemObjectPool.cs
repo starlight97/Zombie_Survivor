@@ -49,7 +49,7 @@ public class DropItemObjectPool : MonoBehaviour
         ObjectStorage.Push(tmpObj);
     }
 
-    private void UseObject(int Amount = 1)
+    public void UseObject(int Amount = 1)
     {
         for (int i = 0; i < Amount; i++)
         {

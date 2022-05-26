@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyBodyDataBase
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  Speed: 4
+  Speed: 2
   Damage: 5
-  Radius: 1.5
+  Radius: 1
   CoolTime: 2

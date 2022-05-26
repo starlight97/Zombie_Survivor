@@ -10,6 +10,8 @@ using UnityEngine;
 public class EnemyAIBase : MonoBehaviour
 {
     //임시로 사용할 플레이어 트렌스폼.
+    [SerializeField] protected EnemyAnimationBase EnemyAnimation;
+
     public Transform playerTransform;
     protected Rigidbody2D rigidbody;
     protected float Speed;          //디폴트로 지정된 스피드.
@@ -35,6 +37,13 @@ public class EnemyAIBase : MonoBehaviour
         moveVec = new Vector3();
         NormalVec = new Vector3();
         FrezeeVec = Vector3.zero;
+        if (EnemyAnimation == null) //적 에니메이션 스크립트가 달려있지 않을시 취득 시도.
+        {
+            EnemyAnimation = GetComponent<EnemyAnimationBase>();
+#if UNITY_EDITOR
+            Debug.LogError("This Object has not EnemyAnimationBase\nTry Get Component...");
+#endif
+        }
     }
 
     public virtual void SetUp(float getSpeed, float getAttackRadius)
