@@ -17,7 +17,7 @@ public class EnemyBodyBase : MonoBehaviour
     [SerializeField] protected EnemyAnimationBase EnemyAnimation;
 
     //적 경험치 오브젝트 풀
-    [SerializeField] protected DropItemObjectPool ObjectPool;
+    [SerializeField] public DropItemObjectPool ObjectPool;
 
     [SerializeField] protected HealthBar healthBar;
 
@@ -352,6 +352,7 @@ public class EnemyBodyBase : MonoBehaviour
 
         //비활성화 오브젝트 풀링시에 해당 풀로 복귀
         ObjectPool.CallFunc_DropEXP(this.transform, 1);
+        EnemyAI.RetrunStackThis();
         this.gameObject.SetActive(false);
     }
 
