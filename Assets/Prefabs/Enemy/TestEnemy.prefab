@@ -103,7 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60237d1d0a7abcf4f9ecf578b792de98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyAnimation: {fileID: 0}
+  EnemyAnimation: {fileID: 4835273303556701411}
+  EnemyBody: {fileID: 1764517005246268541}
   playerTransform: {fileID: 0}
 --- !u!114 &1764517005246268541
 MonoBehaviour:
@@ -120,7 +121,8 @@ MonoBehaviour:
   bodydata: {fileID: 11400000, guid: 80b065e86ce11c64d8d5c00ab090ed64, type: 2}
   EnemyAI: {fileID: 1764517005246268538}
   EnemyAttack: {fileID: 1764517005246268535}
-  EnemyAnimation: {fileID: 0}
+  EnemyAnimation: {fileID: 4835273303556701411}
+  ObjectPool: {fileID: 0}
   healthBar: {fileID: 6943113658459316788}
   MaxHealth: 0
   fDotWaitTime: 1
@@ -141,6 +143,7 @@ MonoBehaviour:
   Radius: 0
   CoolTime: 0
   AttackCircle: {fileID: 1764517005942436845}
+  EnemyAnimation: {fileID: 4835273303556701411}
 --- !u!114 &4835273303556701411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea153513c99f8943b60f2deb5514fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1764517005246268533}
 --- !u!50 &1764517005246268534
 Rigidbody2D:
   serializedVersion: 4

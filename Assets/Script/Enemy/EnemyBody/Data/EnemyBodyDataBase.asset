@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f6de3de37c77e4fb23238093a8c3fb, type: 3}
   m_Name: EnemyBodyDataBase
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 10
   Speed: 2
   Damage: 5
   Radius: 1
