@@ -6,24 +6,37 @@ public class GameManager : MonoBehaviour
 {
     private PlayerHP playerHP;
     private GameObject panelGameOver;
-    // Start is called before the first frame update
+    private GameObject exitObject;      // 출구오브젝트
+    private float timeLimit = 10f;     // 제한 시간
+    private bool isWave = false;       // 웨이브 스타트가 되었는지 확인변수
+
+    public float TimeLimit => timeLimit;
+   
     void Start()
     {
         Setup();
     }
 
-    // Update is called once per frame
+    
     private void Update()
     {
-        GameOver();
+        //GameOver();
+
+        if(isWave)
+        {
+            timeLimit -= Time.deltaTime;
+        }
+
+        WaveClear();
     }
 
     private void Setup()
     {
         playerHP = GameObject.Find("Player").GetComponent<PlayerHP>();
-        panelGameOver = GameObject.Find("PanelGameOver").gameObject;
-
-        panelGameOver.SetActive(false);
+        panelGameOver = GameObject.Find("PanelGameOver");
+        exitObject = GameObject.Find("ExitObject");
+        //panelGameOver.SetActive(false);
+        exitObject.SetActive(false);
     }
 
     private void GameOver()
@@ -33,4 +46,20 @@ public class GameManager : MonoBehaviour
             panelGameOver.SetActive(true);
         }
     }
+
+    private void WaveClear()
+    {
+        if(timeLimit < 0)
+        {
+            isWave = false;
+            exitObject.SetActive(true);
+        }
+    }
+
+    public void WaveStart()
+    {
+        isWave = true;
+    }
+
+
 }
