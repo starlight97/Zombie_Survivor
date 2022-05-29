@@ -115,11 +115,11 @@ public class EnemyAttackBase : MonoBehaviour
         Attack(collision);
     }
 
-    public void ModifydeAttackCooltime(float per)
+    public virtual void ModifydeAttackCooltime(float per)
     {
         WaitCoolTime = new WaitForSeconds(CoolTime * per);
     }
-    public void UndoAttackCooltime()
+    public virtual void UndoAttackCooltime()
     {
         WaitCoolTime = new WaitForSeconds(CoolTime);
     }
