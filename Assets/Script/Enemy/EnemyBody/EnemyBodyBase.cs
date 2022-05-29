@@ -74,7 +74,7 @@ public class EnemyBodyBase : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+/*        if (Input.GetKeyDown(KeyCode.A))
         {
             GetDotDamaged(10, 3, 10);
         }
@@ -89,7 +89,7 @@ public class EnemyBodyBase : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             GetMaxHealthPerDamage(TestFloat);
-        }
+        }*/
     }
     protected virtual void FixedUpdate()
     {
@@ -244,7 +244,7 @@ public class EnemyBodyBase : MonoBehaviour
         StartCoroutine(corSpeededit);
 
     }
-    protected IEnumerator CorFuncSpeedEdit(float per,int HoldTime)
+    protected virtual IEnumerator CorFuncSpeedEdit(float per,int HoldTime)
     {
         //속도 감소 적용
         EnemyAI.ModifydeSpeed(per);
@@ -283,7 +283,7 @@ public class EnemyBodyBase : MonoBehaviour
         corMaxhealthReduction = CorFuncMaxhealthReduction(per, HoldTime);
         StartCoroutine(corMaxhealthReduction);
     }
-    protected IEnumerator CorFuncMaxhealthReduction(float per, int HoldTime)
+    protected virtual IEnumerator CorFuncMaxhealthReduction(float per, int HoldTime)
     {
         //채력 감소 적용
         for (int i = 0; i < HoldTime; i++)
