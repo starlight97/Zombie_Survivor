@@ -37,9 +37,10 @@ public class EnemyLangeObj : MonoBehaviour
     /// </summary>
     /// <param name="mSpeed"></param>
     /// <param name="mDamage"></param>
-    public void SetUp(float mSpeed, int mDamage)
+    public void SetUp(float mSpeed, float mLifeTime, int mDamage)
     {
         fSpeed = mSpeed;
+        OnAbleTime = mLifeTime;
         objDamage = mDamage;
     }
 
@@ -53,6 +54,8 @@ public class EnemyLangeObj : MonoBehaviour
         tmpVec3 = getPosition - this.transform.position;
         tmpVec3 = tmpVec3.normalized * fSpeed;
         rigidbody.velocity = tmpVec3;
+
+        StartCoroutine(CorFuncDestroySelf());
     }
 
     //해당 오브젝트를 셀프로 제거하기 위한 코루틴.
