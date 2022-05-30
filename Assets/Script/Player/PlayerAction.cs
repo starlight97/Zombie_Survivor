@@ -41,7 +41,11 @@ public class PlayerAction : MonoBehaviour
     {
         if (scanObject.name == "Switch")
         {            
-            gameManager.WaveStart();
+            gameManager.StageStart();
+        }
+        else if(scanObject.name == "ExitObject")
+        {
+            gameManager.NextStage();
         }
     }
 
